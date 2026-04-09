@@ -1,143 +1,80 @@
-import { useRef, useState, useEffect } from 'react';
-import { Link } from 'react-scroll';
+import { useState, useEffect } from 'react';
 import { useTheme } from './ThemeContext';
+import { useScrollSpy } from '../hooks';
 import { BsSun, BsMoonStars } from 'react-icons/bs';
 
+const sections = [
+  { id: 'about', label: 'About', number: '01' },
+  { id: 'experience', label: 'Experience', number: '02' },
+  { id: 'projects', label: 'Projects', number: '03' },
+  { id: 'contact', label: 'Contact', number: '04' },
+];
+
+const sectionIds = ['hero', 'about', 'experience', 'projects', 'contact'];
+
 export default function Navbar() {
-  const navbarRef = useRef(null);
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [landingActive, setLandingActive] = useState(true);
   const { theme, toggleTheme } = useTheme();
+  const activeSection = useScrollSpy(sectionIds);
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
-
-  useEffect(
-    function setTheme() {
-      const navbarElement = document.getElementById('navbar');
-      if (theme === 'light') {
-        navbarElement.style.setProperty('--navbar-bg-color', '#f1f4f7');
-      } else {
-        navbarElement.style.setProperty('--navbar-bg-color', '#242424');
-      }
-      document.body.className = theme;
-    },
-    [theme]
-  );
-
-  useEffect(function detectTopOfPage() {
-    const navbarElement = navbarRef.current;
-
-    const handleScroll = () => {
-      if (window.scrollY < 10) {
-        setLandingActive(true);
-        navbarElement.classList.remove('shadow');
-      } else {
-        setLandingActive(false);
-        navbarElement.classList.add('shadow');
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [menuOpen]);
+
+  const scrollTo = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    setMenuOpen(false);
+  };
+
   return (
-    <>
-      <nav
-        id='navbar'
-        ref={navbarRef}
-        className={`navbar${theme === 'light' ? ' light' : ''}`}>
-        <button
-          className='navbar-toggler'
-          type='button'
-          data-toggle='collapse'
-          data-target='#navbarNav'
-          aria-controls='navbarNav'
-          aria-expanded='false'
-          aria-label='Toggle navigation'
-          onClick={toggleMenu}>
-          <span
-            className={`navbar-toggler-icon${menuOpen ? ' open' : ''}${
-              theme === 'light' ? ' light' : ''
-            }`}></span>
-        </button>
-        <div
-          className={`collapse navbar-collapse${menuOpen ? ' show' : ''}`}
-          id='navbarNav'>
-          <ul className='navbar-nav'>
-            <div className='link-container'>
-              <li className='nav-item'>
-                <Link
-                  activeClass='active'
-                  className={`nav-link${landingActive ? ' active' : ''} ${
-                    theme === 'light' ? ' light' : ''
-                  }`}
-                  to='landing'
-                  spy={true}
-                  smooth={true}
-                  offset={-20}
-                  duration={500}
-                  onSetActive={() => setLandingActive(true)}
-                  onSetInactive={() => setLandingActive(false)}>
-                  Home
-                </Link>
-              </li>
-              <li className='nav-item'>
-                <Link
-                  className={`nav-link${theme === 'light' ? ' light' : ''}`}
-                  to='about'
-                  spy={true}
-                  smooth={true}
-                  offset={-20}
-                  duration={500}>
-                  About
-                </Link>
-              </li>
-              <li className='nav-item'>
-                <Link
-                  className={`nav-link${theme === 'light' ? ' light' : ''}`}
-                  to='resume'
-                  spy={true}
-                  smooth={true}
-                  offset={-20}
-                  duration={500}>
-                  Experience
-                </Link>
-              </li>
-              <li className='nav-item'>
-                <Link
-                  className={`nav-link${theme === 'light' ? ' light' : ''}`}
-                  to='projects'
-                  spy={true}
-                  smooth={true}
-                  offset={-20}
-                  duration={500}>
-                  Projects
-                </Link>
-              </li>
-            </div>
-            <li className='nav-item'>
-              <div className='theme-icon-wrapper' onClick={toggleTheme}>
-                <BsSun
-                  className={`theme-icon sun-icon ${
-                    theme === 'dark' ? 'visible' : 'hidden'
-                  }`}
-                />
-                <BsMoonStars
-                  className={`theme-icon moon-icon ${
-                    theme === 'light' ? 'visible' : 'hidden'
-                  }`}
-                />
-              </div>
+    <nav className={`nav${scrolled ? ' nav--scrolled' : ''}`}>
+      <button className="nav__logo" onClick={() => scrollTo('hero')}>
+        Angel Rodriguez
+      </button>
+
+      <button
+        className={`nav__hamburger${menuOpen ? ' nav__hamburger--open' : ''}`}
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle navigation"
+        aria-expanded={menuOpen}
+      >
+        <span />
+        <span />
+        <span />
+      </button>
+
+      <div className={`nav__menu${menuOpen ? ' nav__menu--open' : ''}`}>
+        <ul className="nav__links">
+          {sections.map(({ id, label, number }) => (
+            <li key={id}>
+              <button
+                className={`nav__link${activeSection === id ? ' nav__link--active' : ''}`}
+                onClick={() => scrollTo(id)}
+              >
+                <span className="nav__link-number">{number}.</span> {label}
+              </button>
             </li>
-          </ul>
-        </div>
-      </nav>
-    </>
+          ))}
+        </ul>
+        <button
+          className="nav__theme-toggle"
+          onClick={toggleTheme}
+          aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+        >
+          {theme === 'light' ? <BsMoonStars /> : <BsSun />}
+        </button>
+      </div>
+    </nav>
   );
 }

@@ -1,49 +1,67 @@
-import img from '../assets/images/bitmojime.png';
-import { useTheme } from './ThemeContext';
+import { useInView } from '../hooks';
+import img from '../assets/images/x-profile.png';
+
+const toolkit = {
+  Frontend: ['React', 'JavaScript', 'HTML', 'CSS'],
+  Backend: ['Python', 'Django'],
+  Tools: ['Git', 'Vite', 'Webpack', 'Jest'],
+  APIs: ['Google Maps', 'HERE Maps', 'Cloudinary'],
+  Infrastructure: ['Cloudflare', 'Railway'],
+};
 
 export default function About() {
-  const { theme } = useTheme();
+  const [ref, isInView] = useInView();
 
   return (
-    <section className='about'>
-      <h2 className={`page-header page-header-${theme}`}>About Me</h2>
-      <div>
-        <div className='bio-img'>
-          <img src={img} />
+    <section id='about' className='about section' ref={ref}>
+      <div className={`fade-in${isInView ? ' visible' : ''}`}>
+        <p className='section-label'>01 // ABOUT</p>
+        <div className='about__grid'>
+          <div className='about__photo-wrapper'>
+            <img
+              src={img}
+              alt='Angel Rodriguez'
+              className='about__photo'
+              loading='lazy'
+            />
+          </div>
+          <div className='about__bio'>
+            <p>
+              I&apos;ve been building software professionally for over six years,
+              mostly focused on internal tools, mapping systems, and workflow
+              automation. I like taking messy business problems and turning them
+              into clean, reliable applications that people actually want to use.
+            </p>
+            <p>
+              Most of my work has been on the enterprise side: interactive
+              mapping platforms for sales teams, automated workflows that
+              replaced hours of manual effort, and API integrations that
+              connected the dots between disconnected systems. My go-to stack is
+              React and JavaScript on the frontend, Python and Django on the
+              backend. I care a lot about performance and making things
+              accessible.
+            </p>
+            <p>
+              Before I was a developer, I studied culinary arts. That background
+              taught me more about building software than you&apos;d expect: attention
+              to detail, working clean under pressure, and caring about the
+              craft behind what you put out into the world.
+            </p>
+          </div>
         </div>
-        <div className='bio-desc'>
-          <p>
-            Application Developer with 6+ years of experience building
-            data-driven internal tools, mapping systems, and workflow automation
-            that drive operational efficiency and strategic decision-making.
-            Proven track record of:
-          </p>
-          <ul>
-            <li>
-              Reducing costs by automating business processes, such as saving
-              $90K in file storage upgrades through streamlined attachment
-              migrations.
-            </li>
-            <li>
-              Enabling nationwide strategic sales targeting with interactive
-              mapping platforms integrating HereMaps APIs and JavaScript.
-            </li>
-            <li>
-              Improving workflows for 90% of employees by developing real-time
-              distance calculation tools with Google Maps APIs, optimizing
-              logistical planning.
-            </li>
-            <li>
-              Enhancing client data management and clinical workflows with API
-              integrations.
-            </li>
-          </ul>
-          <p>
-            Skilled at partnering with cross-functional teams to build scalable,
-            maintainable, and impactful applications. Adept in React,
-            JavaScript, and API development with a strong focus on performance,
-            accessibility, and user-centered design.
-          </p>
+        <div className='about__toolkit'>
+          {Object.entries(toolkit).map(([category, skills]) => (
+            <div key={category} className='about__toolkit-category'>
+              <h4 className='about__toolkit-label'>{category}</h4>
+              <div className='about__toolkit-tags'>
+                {skills.map(skill => (
+                  <span key={skill} className='about__tag'>
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
