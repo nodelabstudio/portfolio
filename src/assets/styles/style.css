@@ -503,6 +503,7 @@ p:last-child {
   width: 100%;
   max-width: 220px;
   border-radius: 12px;
+  background-color: var(--bg);
 }
 
 .about__bio p {
