@@ -13,7 +13,7 @@ export default function About() {
   const [ref, isInView] = useInView();
 
   return (
-    <section id='about' className='about section' ref={ref}>
+    <section id='about' className='about section section--about' ref={ref}>
       <div className={`fade-in${isInView ? ' visible' : ''}`}>
         <p className='section-label'>01 // ABOUT</p>
         <div className='about__grid'>

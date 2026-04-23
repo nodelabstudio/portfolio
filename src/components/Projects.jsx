@@ -17,7 +17,7 @@ export default function Projects() {
       : others.filter((p) => p.techTags.includes(activeFilter));
 
   return (
-    <section id="projects" className="projects section" ref={ref}>
+    <section id="projects" className="projects section section--projects" ref={ref}>
       <div className={`fade-in${isInView ? ' visible' : ''}`}>
         <p className="section-label">03 // PROJECTS</p>
 

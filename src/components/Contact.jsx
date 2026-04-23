@@ -6,7 +6,7 @@ export default function Contact() {
   const [ref, isInView] = useInView();
 
   return (
-    <section id='contact' className='contact section' ref={ref}>
+    <section id='contact' className='contact section section--contact' ref={ref}>
       <div className={`fade-in${isInView ? ' visible' : ''}`}>
         <p className='section-label'>04 // CONTACT</p>
         <h2 className='contact__heading'>Get in Touch</h2>

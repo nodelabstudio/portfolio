@@ -14,7 +14,7 @@ export default function Resume() {
   const activeItem = allTabs[activeTab];
 
   return (
-    <section id="experience" className="experience section" ref={ref}>
+    <section id="experience" className="experience section section--resume" ref={ref}>
       <div className={`fade-in${isInView ? ' visible' : ''}`}>
         <p className="section-label">02 // EXPERIENCE</p>
         <div className="experience__container">

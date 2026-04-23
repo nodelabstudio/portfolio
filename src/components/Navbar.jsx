@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useTheme } from './ThemeContext';
 import { useScrollSpy } from '../hooks';
-import { BsSun, BsMoonStars } from 'react-icons/bs';
 
 const sections = [
   { id: 'about', label: 'About', number: '01' },
@@ -13,7 +11,6 @@ const sections = [
 const sectionIds = ['hero', 'about', 'experience', 'projects', 'contact'];
 
 export default function Navbar() {
-  const { theme, toggleTheme } = useTheme();
   const activeSection = useScrollSpy(sectionIds);
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -24,7 +21,6 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Lock body scroll when mobile menu is open
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : '';
     return () => {
@@ -67,13 +63,6 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-        <button
-          className="nav__theme-toggle"
-          onClick={toggleTheme}
-          aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
-        >
-          {theme === 'light' ? <BsMoonStars /> : <BsSun />}
-        </button>
       </div>
     </nav>
   );

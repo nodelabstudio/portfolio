@@ -13,6 +13,7 @@ export default function Landing() {
       <div
         className={`hero__content${isInView ? ' hero__content--visible' : ''}`}
       >
+        <p className="hero__eyebrow">Portfolio — 2026</p>
         <h1 className="hero__name">Angel Rodriguez</h1>
         <p className="hero__subtitle">
           App Developer focused on scalable solutions and UI performance.
