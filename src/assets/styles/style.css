@@ -54,6 +54,13 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--nav-height);
+  overflow-x: hidden;
+}
+
+@supports (overflow: clip) {
+  html {
+    overflow-x: clip;
+  }
 }
 
 body {
@@ -335,7 +342,9 @@ p:last-child {
   background-size: 100% 1.5px;
 }
 
-/* ===== Navigation ===== */
+/* ===== Navigation =====
+   NOTE: backdrop-filter lives on .nav::before (not .nav) so .nav does not
+   become a containing block for position:fixed descendants like the mobile menu. */
 .nav {
   position: sticky;
   top: 0;
@@ -345,19 +354,28 @@ p:last-child {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(7, 13, 24, 0);
-  backdrop-filter: blur(0);
-  transition: background var(--transition-base),
-    backdrop-filter var(--transition-base),
-    border-color var(--transition-base);
   border-bottom: 1px solid transparent;
+  transition: border-color var(--transition-base);
+}
+
+.nav::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: transparent;
+  transition: background var(--transition-base),
+    backdrop-filter var(--transition-base);
 }
 
 .nav--scrolled {
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+
+.nav--scrolled::before {
   background: rgba(7, 13, 24, 0.7);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom-color: rgba(255, 255, 255, 0.06);
 }
 
 .nav__logo {
@@ -1219,19 +1237,27 @@ p:last-child {
     padding: 0.75rem 1.5rem;
   }
 
+  .hero {
+    align-items: stretch;
+  }
+
+  .hero__content {
+    max-width: 100%;
+  }
+
   .hero__name {
     font-size: clamp(2.75rem, 12vw, 4.5rem);
   }
 
   .about__grid {
     grid-template-columns: 1fr;
-    justify-items: start;
     text-align: left;
   }
 
   .about__photo-wrapper {
     position: static;
-    max-width: 220px;
+    max-width: 240px;
+    width: 100%;
   }
 
   .about__photo {
