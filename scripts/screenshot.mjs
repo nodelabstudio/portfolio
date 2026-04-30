@@ -33,7 +33,7 @@ async function main() {
   for (const vp of VIEWPORTS) {
     const context = await browser.newContext({
       viewport: { width: vp.width, height: vp.height },
-      deviceScaleFactor: 2,
+      deviceScaleFactor: 1,
     });
     const page = await context.newPage();
     await page.goto(APP_URL, { waitUntil: 'networkidle' });
