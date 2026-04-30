@@ -41,12 +41,6 @@ export default function About() {
               backend. I care a lot about performance and making things
               accessible.
             </p>
-            <p>
-              Before I was a developer, I studied culinary arts. That background
-              taught me more about building software than you&apos;d expect: attention
-              to detail, working clean under pressure, and caring about the
-              craft behind what you put out into the world.
-            </p>
           </div>
         </div>
         <div className='about__toolkit'>

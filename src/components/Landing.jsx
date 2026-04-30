@@ -18,7 +18,7 @@ export default function Landing() {
         <p className="hero__subtitle">
           App Developer focused on scalable solutions and UI performance.
         </p>
-        <p className="hero__meta">Application Developer · Pennsylvania</p>
+        <p className="hero__meta">Application Developer · U.S.A.</p>
         <div className="hero__ctas">
           <button
             className="btn btn--primary"

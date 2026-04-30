@@ -32,3 +32,5 @@ todos.txt
 
 # Local Netlify folder
 .netlify
+
+.vscode*

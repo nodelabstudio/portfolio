@@ -2,6 +2,7 @@ import Navbar from './components/Navbar';
 import Landing from './components/Landing';
 import About from './components/About';
 import Resume from './components/Resume';
+import AIWork from './components/AIWork';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import ScrollToTop from './components/ScrollToTop';
@@ -15,6 +16,7 @@ function App() {
         <Landing />
         <About />
         <Resume />
+        <AIWork />
         <Projects />
         <Contact />
       </main>

@@ -2,7 +2,7 @@ const experience = [
   {
     id: 'app-developer',
     title: 'Application Developer',
-    location: 'Pennsylvania',
+    location: 'U.S.A.',
     date: '2020 - Present',
     bullets: [
       'Saved $90K in file storage upgrades by engineering automated attachment migration workflows across internal platforms',
@@ -14,7 +14,7 @@ const experience = [
   {
     id: 'jr-developer',
     title: 'Jr. Software Developer',
-    location: 'Pennsylvania',
+    location: 'U.S.A.',
     date: '2019 - 2020',
     bullets: [
       'Launched client-facing web applications for behavioral health workflow management and reporting',
@@ -25,16 +25,4 @@ const experience = [
   },
 ];
 
-const education = [
-  {
-    institution: 'New York Code & Design Academy',
-    detail:
-      'Completed 720+ hours of intensive full-stack training covering OOP, TDD, pair programming, AGILE, and SCRUM methodologies.',
-  },
-  {
-    institution: 'Walnut Hill College',
-    detail: 'Bachelor of Science in Culinary Arts - Summa Cum Laude',
-  },
-];
-
-export { experience, education };
+export { experience };

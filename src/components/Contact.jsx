@@ -1,5 +1,5 @@
 import { useInView } from '../hooks';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
 import { GoMail } from 'react-icons/go';
 
 export default function Contact() {
@@ -8,7 +8,7 @@ export default function Contact() {
   return (
     <section id='contact' className='contact section section--contact' ref={ref}>
       <div className={`fade-in${isInView ? ' visible' : ''}`}>
-        <p className='section-label'>04 // CONTACT</p>
+        <p className='section-label'>05 // CONTACT</p>
         <h2 className='contact__heading'>Get in Touch</h2>
         <p className='contact__text'>
           I&apos;m always up for hearing about new projects or opportunities.
@@ -28,14 +28,6 @@ export default function Contact() {
             rel='noreferrer'
           >
             <GoMail />
-          </a>
-          <a
-            href='https://www.linkedin.com/in/angelrodriguezlead/'
-            target='_blank'
-            aria-label='LinkedIn'
-            rel='noreferrer'
-          >
-            <FaLinkedin />
           </a>
           <a
             href='https://github.com/nodelabstudio'

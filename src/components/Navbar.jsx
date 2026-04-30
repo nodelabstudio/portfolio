@@ -4,11 +4,12 @@ import { useScrollSpy } from '../hooks';
 const sections = [
   { id: 'about', label: 'About', number: '01' },
   { id: 'experience', label: 'Experience', number: '02' },
-  { id: 'projects', label: 'Projects', number: '03' },
-  { id: 'contact', label: 'Contact', number: '04' },
+  { id: 'ai-work', label: 'AI Work', number: '03' },
+  { id: 'projects', label: 'Projects', number: '04' },
+  { id: 'contact', label: 'Contact', number: '05' },
 ];
 
-const sectionIds = ['hero', 'about', 'experience', 'projects', 'contact'];
+const sectionIds = ['hero', 'about', 'experience', 'ai-work', 'projects', 'contact'];
 
 export default function Navbar() {
   const activeSection = useScrollSpy(sectionIds);

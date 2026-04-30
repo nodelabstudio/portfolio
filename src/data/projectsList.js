@@ -1,123 +1,76 @@
-import bidstrocityImage from '../assets/images/bidstrocity.png';
-import cctImage from '../assets/images/cct_screen.png';
-import mibraryImage from '../assets/images/mibrary_screen.png';
-import battleshipImage from '../assets/images/battleship_screen.png';
-import mapattackImage from '../assets/images/mapattack.png';
-import knightTravailsImage from '../assets/images/knightstravails.png';
-import santaCarlaSurfImage from '../assets/images/santa-carla-surf-home.png';
+import harborImage from '../assets/images/harbor-screenshot.png';
+import cloudfireImage from '../assets/images/cloudfire-screenshot.png';
+import tideImage from '../assets/images/tide-screenshot.png';
+import auroraImage from '../assets/images/aurora-screenshot.png';
+import signalImage from '../assets/images/signal-screenshot.png';
+import portfolioImage from '../assets/images/portfolio-screenshot.png';
 
 const projects = [
   {
     id: 1,
-    title: 'Case Crime Trace',
+    title: 'Harbor & Cross',
     description:
-      'A crime reporting and tracking platform that gives citizens a way to efficiently report and track local crimes. Built with Django, it includes user authentication, real-time updates, and suspect reporting features. The app is fronted by Cloudflare for SSL, caching, and DDoS protection, with the backend hosted on Railway.',
-    shortDescription:
-      'Crime reporting and tracking platform with real-time updates and community safety features.',
-    image: cctImage,
-    alt: 'Screenshot of Case Crime Trace Django app interface',
-    live: 'https://crimetrace.online/',
-    github: 'https://github.com/angelr1076/django-cct',
-    featured: true,
-    techTags: ['Python', 'Django', 'JavaScript', 'Cloudflare'],
+      'A marketing site for Harbor & Cross, a daily devotional iOS app built for Christian fathers. Designed to drive App Store installs and establish a clear brand presence, the site is built on Next.js 15 with the App Router and a static export, written in TypeScript, and styled with Tailwind CSS. Framer Motion handles the animation work, including a custom flip-card devotional preview, responsive phone mockups, and a content-driven newsletter pipeline. Deployed on Vercel under a custom domain at harborandcross.com.',
+    image: harborImage,
+    alt: 'Screenshot of Harbor & Cross marketing site',
+    live: 'https://harborandcross.com',
+    github: null,
+    techTags: ['Next.js 15', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Vercel'],
   },
   {
     id: 2,
-    title: 'Mibrary',
+    title: 'Cloudfire Image Generation',
     description:
-      'A personal library management app for organizing books and posting rich-text reviews. Built with Django, it integrates CKEditor for content creation and Cloudinary for image hosting. Served through Cloudflare with DDoS protection, reverse-proxied to Railway.',
-    shortDescription:
-      'Personal library management with rich-text reviews and cloud image hosting.',
-    image: mibraryImage,
-    alt: 'Screenshot of Mibrary Django library management app',
-    live: 'https://mibrary.online/',
-    github: 'https://github.com/angelr1076/django-mibrary',
-    featured: true,
-    techTags: ['Python', 'Django', 'JavaScript', 'Cloudinary'],
+      "An AI image-generation studio that lets users compare thirteen image models from Cloudflare Workers AI and Google Gemini side by side. Built on FastAPI with a custom pastel design system pairing Fraunces and Plus Jakarta Sans, the app includes session-based authentication with bcrypt, CSRF protection, rate limiting, password reset over SMTP, and a gallery with favorites, tags, and shareable public links. Images are stored on Cloudinary's CDN, with PostgreSQL hosted on Railway and Cloudflare fronting the application for SSL, caching, and DDoS protection.",
+    image: cloudfireImage,
+    alt: 'Screenshot of Cloudfire AI image generation studio',
+    live: 'https://cloudfire.one',
+    github: 'https://github.com/nodelabstudio/cloudfire-image-generator',
+    techTags: ['FastAPI', 'PostgreSQL', 'Cloudinary', 'Cloudflare', 'Railway'],
   },
   {
     id: 3,
-    title: 'Map Sync Pro',
+    title: 'Tide — Journal App',
     description:
-      'A geospatial mapping tool that combines user-specific data with HERE Maps technologies for geographic and demographic visualization. Built to integrate user datasets with interactive mapping for analysis and insight.',
-    shortDescription:
-      'Geospatial mapping tool combining user data with HERE Maps for visual analysis.',
-    image:
-      'https://res.cloudinary.com/angelrodriguez/image/upload/v1703191479/portfolio_2023/mapsyncshot.png',
-    alt: 'Screenshot of Map Sync Pro geospatial mapping tool',
-    live: 'https://mapsyncpro.pages.dev/',
-    github: 'https://github.com/angelr1076/MapSyncPro',
-    featured: true,
-    techTags: ['JavaScript', 'HERE Maps API'],
+      'A daily reflection app built around an iOS 26 Liquid Glass UI. Built on Next.js 15, it features AI-generated journaling prompts, weekly pattern synthesis, and per-entry reframing through Groq. The data layer runs on Supabase and Upstash, hosted on Vercel behind Cloudflare DNS.',
+    image: tideImage,
+    alt: 'Screenshot of Tide journaling app interface',
+    live: 'https://tide.angelrod.dev',
+    github: 'https://github.com/nodelabstudio/tide-ai-app-journal',
+    techTags: ['Next.js 15', 'Supabase', 'Upstash', 'Groq', 'Vercel'],
   },
   {
     id: 4,
-    title: 'Bidstrocity',
+    title: 'Aurora — Mood Dashboard',
     description:
-      'An eBay-like auction platform where users can create, manage, and bid on listings with commenting and watchlist features. Fronted by Cloudflare with the backend on Railway.',
-    shortDescription:
-      'Auction platform with bidding, watchlists, and commenting features.',
-    image: bidstrocityImage,
-    alt: 'Screenshot of Bidstrocity Django auction site',
-    live: 'https://bidstrocity.online/',
-    github: 'https://github.com/angelr1076/commerce',
-    featured: false,
-    techTags: ['Python', 'Django'],
+      "An ambient weather dashboard that pulls live conditions for the user's location, selects a cinematic sky photo matched to the current weather and time of day, and asks an LLM to write a fifty-to-seventy-word literary paragraph about the scene. Built on Next.js 15 and React 19, the interface layers glassmorphism panels with GSAP-driven parallax over OpenWeatherMap data. A Groq-to-OpenRouter LLM fallback chain handles model availability, and an Upstash Redis cache with a sliding-window rate limiter manages traffic. Hosted on Vercel, fronted by Cloudflare for SSL, caching, and DNS.",
+    image: auroraImage,
+    alt: 'Screenshot of Aurora mood weather dashboard',
+    live: 'https://aurora.angelrod.dev',
+    github: 'https://github.com/nodelabstudio/aurora-mood-dashboard',
+    techTags: ['Next.js 15', 'React 19', 'GSAP', 'Groq', 'Upstash'],
   },
   {
     id: 5,
-    title: 'Battleship',
+    title: 'Signal & Circuit',
     description:
-      'Classic Battleship game with a smart AI opponent, factory functions, Webpack module bundling, and Jest testing.',
-    shortDescription:
-      'Classic game with smart AI, modular design, and full test coverage.',
-    image: battleshipImage,
-    alt: 'Screenshot of Battleship JavaScript game board',
-    live: 'https://battleship-boom.pages.dev/',
-    github: 'https://github.com/angelr1076/Battleship',
-    featured: false,
-    techTags: ['JavaScript', 'Jest', 'Webpack'],
+      'An AI-powered publication covering the people and systems turning large language models into real, working software. Operated as an experiment in agent-led publishing: research, drafting, and first-pass production are handled by a custom Hermes agent with a dedicated writer profile, while editorial judgment, accuracy review, and final approval remain with me. Coverage spans builder tooling, agent workflows, release shifts, and the operational realities that surface once AI products meet daily production use. The editorial stance is practitioner-first — no empty hype, no rewritten press releases, no manufactured certainty.',
+    image: signalImage,
+    alt: 'Screenshot of Signal & Circuit AI publication',
+    live: 'https://signalcircuit.cloud',
+    github: 'https://github.com/nodelabstudio/signal-n-circuit-publication',
+    techTags: ['AI Publishing', 'Hermes Agent', 'Editorial'],
   },
   {
     id: 6,
-    title: 'Map Attack',
+    title: 'Portfolio',
     description:
-      'A remastered interactive game using Google Maps API with modularized functions and responsive design.',
-    shortDescription:
-      'Interactive Google Maps game with modular architecture.',
-    image: mapattackImage,
-    alt: 'Screenshot of Map Attack interactive Google Maps game',
-    live: 'https://mapattackremastered.pages.dev/',
-    github: 'https://github.com/angelr1076/MapAttackRemastered',
-    featured: false,
-    techTags: ['JavaScript', 'Google Maps API'],
-  },
-  {
-    id: 7,
-    title: "Knight's Travails",
-    description:
-      'A chess knight pathfinding visualizer using Breadth-First Search to find the shortest route on an 8x8 board.',
-    shortDescription: 'BFS pathfinding visualizer for chess knight movement.',
-    image: knightTravailsImage,
-    alt: "Screenshot of Knight's Travails chess algorithm visualizer",
-    live: 'https://angelr1076.github.io/Knight-Travails/',
-    github: 'https://github.com/angelr1076/Knight-Travails',
-    featured: false,
-    techTags: ['JavaScript'],
-  },
-  {
-    id: 8,
-    title: 'React Shopping Cart',
-    description:
-      'An e-commerce storefront using React Context API for state management and React Router for navigation.',
-    shortDescription: 'E-commerce app with Context API state management.',
-    image: santaCarlaSurfImage,
-    alt: 'Screenshot of React Shopping Cart project home page',
-    live: 'https://santa-carla-surf.pages.dev/',
-    github:
-      'https://github.com/angelr1076/React-Shopping-Cart?tab=readme-ov-file',
-    featured: false,
-    techTags: ['React', 'Vite'],
+      'My personal developer portfolio, built as a single-page editorial site with a warm-minimalism design language and synced light and dark theming. Built on React 18 and Vite, the site leans on a typography-driven hero, scroll-spy navigation powered by the Intersection Observer API, an interactive filterable project grid, and a tabbed experience timeline. Theming is handled entirely through CSS custom properties, allowing instant theme switches without component re-renders.',
+    image: portfolioImage,
+    alt: 'Screenshot of personal developer portfolio site',
+    live: 'https://angelrod.dev',
+    github: 'https://github.com/nodelabstudio/portfolio/tree/main',
+    techTags: ['React 18', 'Vite', 'CSS Variables'],
   },
 ];
 
