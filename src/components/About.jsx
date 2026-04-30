@@ -27,10 +27,11 @@ export default function About() {
           </div>
           <div className='about__bio'>
             <p>
-              I&apos;ve been building software professionally for over six years,
+              I&apos;ve been building software professionally for over 7 years,
               mostly focused on internal tools, mapping systems, and workflow
               automation. I like taking messy business problems and turning them
-              into clean, reliable applications that people actually want to use.
+              into clean, reliable applications that people actually want to
+              use.
             </p>
             <p>
               Most of my work has been on the enterprise side: interactive
