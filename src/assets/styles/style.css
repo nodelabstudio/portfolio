@@ -70,6 +70,7 @@ body {
   font-weight: 400;
   color: var(--text);
   min-height: 100vh;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background:
@@ -78,6 +79,12 @@ body {
     radial-gradient(circle at 20% 80%, rgba(48, 214, 196, 0.12), transparent 26%),
     linear-gradient(180deg, #07101f 0%, #07101a 38%, #050913 100%);
   background-attachment: fixed;
+}
+
+@supports (overflow: clip) {
+  body {
+    overflow-x: clip;
+  }
 }
 
 img {
