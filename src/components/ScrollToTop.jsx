@@ -14,8 +14,7 @@ export default function ScrollToTop() {
     <button
       className={`scroll-top${visible ? ' scroll-top--visible' : ''}`}
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-      aria-label="Scroll to top"
-    >
+      aria-label='Scroll to top'>
       <FaChevronUp />
     </button>
   );

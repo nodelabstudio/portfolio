@@ -9,29 +9,31 @@ export default function Resume() {
   const activeItem = experience[activeTab];
 
   return (
-    <section id="experience" className="experience section section--resume" ref={ref}>
+    <section
+      id='experience'
+      className='experience section section--resume'
+      ref={ref}>
       <div className={`fade-in${isInView ? ' visible' : ''}`}>
-        <p className="section-label">02 // EXPERIENCE</p>
-        <div className="experience__container">
-          <div className="experience__tabs" role="tablist">
+        <p className='section-label'>02 // EXPERIENCE</p>
+        <div className='experience__container'>
+          <div className='experience__tabs' role='tablist'>
             {experience.map((tab, index) => (
               <button
                 key={tab.id}
-                role="tab"
+                role='tab'
                 aria-selected={activeTab === index}
                 className={`experience__tab${activeTab === index ? ' experience__tab--active' : ''}`}
-                onClick={() => setActiveTab(index)}
-              >
+                onClick={() => setActiveTab(index)}>
                 {tab.title}
               </button>
             ))}
           </div>
-          <div className="experience__panel" role="tabpanel">
-            <div className="experience__detail" key={activeItem.id}>
-              <h3 className="experience__role-title">{activeItem.title}</h3>
-              <p className="experience__location">{activeItem.location}</p>
-              <p className="experience__date">{activeItem.date}</p>
-              <ul className="experience__bullets">
+          <div className='experience__panel' role='tabpanel'>
+            <div className='experience__detail' key={activeItem.id}>
+              <h3 className='experience__role-title'>{activeItem.title}</h3>
+              <p className='experience__location'>{activeItem.location}</p>
+              <p className='experience__date'>{activeItem.date}</p>
+              <ul className='experience__bullets'>
                 {activeItem.bullets.map((bullet, i) => (
                   <li key={i}>{bullet}</li>
                 ))}

@@ -5,8 +5,14 @@ const blocks = [
     id: 'hermes',
     label: 'Agent Framework',
     title: 'Hermes Agent',
-    body: "I run a self-hosted Hermes — the open-source agent framework from Nous Research — round-the-clock as the engine behind Signal & Circuit. Identity is anchored in SOUL.md, persistent memory in MEMORY.md, with messaging surfaces beyond CLI. It handles research, drafting, and first-pass production while editorial control stays with me.",
-    tags: ['Hermes', 'Nous Research', 'SOUL.md', 'Persistent Memory', 'Self-Hosted'],
+    body: 'I run a self-hosted Hermes — the open-source agent framework from Nous Research — round-the-clock as the engine behind Signal & Circuit. Identity is anchored in SOUL.md, persistent memory in MEMORY.md, with messaging surfaces beyond CLI. It handles research, drafting, and first-pass production while editorial control stays with me.',
+    tags: [
+      'Hermes',
+      'Nous Research',
+      'SOUL.md',
+      'Persistent Memory',
+      'Self-Hosted',
+    ],
   },
   {
     id: 'openclaw',
@@ -35,23 +41,26 @@ export default function AIWork() {
   const [ref, isInView] = useInView();
 
   return (
-    <section id='ai-work' className='ai-work section section--ai-work' ref={ref}>
+    <section
+      id='ai-work'
+      className='ai-work section section--ai-work'
+      ref={ref}>
       <div className={`fade-in${isInView ? ' visible' : ''}`}>
         <p className='section-label'>03 // AI WORK</p>
         <p className='ai-work__intro'>
-          Most of my AI work is operator-focused — wiring agents and models
-          into systems that actually ship: publish content, generate assets,
-          and run unattended. The stack below is what I run day-to-day across
-          personal projects and tooling.
+          Most of my AI work is operator-focused — wiring agents and models into
+          systems that actually ship: publish content, generate assets, and run
+          unattended. The stack below is what I run day-to-day across personal
+          projects and tooling.
         </p>
         <div className='ai-work__grid'>
-          {blocks.map((block) => (
+          {blocks.map(block => (
             <article key={block.id} className='ai-work__card'>
               <p className='ai-work__card-label'>{block.label}</p>
               <h3 className='ai-work__card-title'>{block.title}</h3>
               <p className='ai-work__card-body'>{block.body}</p>
               <div className='ai-work__card-tags'>
-                {block.tags.map((tag) => (
+                {block.tags.map(tag => (
                   <span key={tag} className='ai-work__card-tag'>
                     {tag}
                   </span>
