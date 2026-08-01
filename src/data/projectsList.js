@@ -1,6 +1,7 @@
 import harborImage from '../assets/images/harbor-screenshot.png';
 import cloudfireImage from '../assets/images/cloudfire-screenshot.png';
 import tideImage from '../assets/images/tide-screenshot.png';
+import starshippedImage from '../assets/images/starshipped-screenshot.png';
 import auroraImage from '../assets/images/aurora-screenshot.png';
 import signalImage from '../assets/images/signal-screenshot.png';
 import portfolioImage from '../assets/images/portfolio-screenshot.png';
@@ -41,6 +42,17 @@ const projects = [
   },
   {
     id: 4,
+    title: 'StarShipped — Fleet Logistics',
+    description:
+      'Star Wars fleet logistics for the Outer Rim. Originally designed and built in 2018 as a Ruby on Rails app, rebuilt in 2026 on Next.js 16 and React 19 with a holo-terminal design language. Captains commission ships, post cargo runs, and dispatch a fleet across ten planets — runs play out in real time, with ETAs derived from starmap distances, lazy arrival settlement, credit payouts, and a captain leaderboard. An SVG galaxy starmap tracks live route arcs, the View Transitions API drives hyperspace page warps, and shared links unfurl dynamic Open Graph ship cards. Clerk handles authentication, Neon Postgres with Drizzle ORM the data layer, and Vercel Blob the ship imagery, deployed on Vercel.',
+    image: starshippedImage,
+    alt: 'Screenshot of StarShipped fleet logistics app',
+    live: 'https://star.angelrod.dev',
+    github: 'https://github.com/nodelabstudio/starshipped',
+    techTags: ['Next.js 16', 'React 19', 'Neon Postgres', 'Drizzle ORM', 'Clerk'],
+  },
+  {
+    id: 5,
     title: 'Aurora — Mood Dashboard',
     description:
       "An ambient weather dashboard that pulls live conditions for the user's location, selects a cinematic sky photo matched to the current weather and time of day, and asks an LLM to write a fifty-to-seventy-word literary paragraph about the scene. Built on Next.js 15 and React 19, the interface layers glassmorphism panels with GSAP-driven parallax over OpenWeatherMap data. A Groq-to-OpenRouter LLM fallback chain handles model availability, and an Upstash Redis cache with a sliding-window rate limiter manages traffic. Hosted on Vercel, fronted by Cloudflare for SSL, caching, and DNS.",
@@ -51,7 +63,7 @@ const projects = [
     techTags: ['Next.js 15', 'React 19', 'GSAP', 'Groq', 'Upstash'],
   },
   {
-    id: 5,
+    id: 6,
     title: 'Signal & Circuit',
     description:
       'An AI-powered publication covering the people and systems turning large language models into real, working software. Operated as an experiment in agent-led publishing: research, drafting, and first-pass production are handled by a custom Hermes agent with a dedicated writer profile, while editorial judgment, accuracy review, and final approval remain with me. Coverage spans builder tooling, agent workflows, release shifts, and the operational realities that surface once AI products meet daily production use. The editorial stance is practitioner-first — no empty hype, no rewritten press releases, no manufactured certainty.',
@@ -62,7 +74,7 @@ const projects = [
     techTags: ['AI Publishing', 'Hermes Agent', 'Editorial'],
   },
   {
-    id: 6,
+    id: 7,
     title: 'Portfolio',
     description:
       'My personal developer portfolio, built as a single-page editorial site with a warm-minimalism design language and synced light and dark theming. Built on React 18 and Vite, the site leans on a typography-driven hero, scroll-spy navigation powered by the Intersection Observer API, an interactive filterable project grid, and a tabbed experience timeline. Theming is handled entirely through CSS custom properties, allowing instant theme switches without component re-renders.',
