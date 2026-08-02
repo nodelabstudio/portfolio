@@ -5,7 +5,7 @@ const blocks = [
     id: 'hermes',
     label: 'Agent Framework',
     title: 'Hermes Agent',
-    body: 'I run a self-hosted Hermes — the open-source agent framework from Nous Research — round-the-clock as the engine behind Signal & Circuit. Identity is anchored in SOUL.md, persistent memory in MEMORY.md, with messaging surfaces beyond CLI. It handles research, drafting, and first-pass production while editorial control stays with me.',
+    body: 'I run a self-hosted Hermes, the open-source agent framework from Nous Research, round-the-clock as the engine behind Signal & Circuit. Identity is anchored in SOUL.md, persistent memory in MEMORY.md, with messaging surfaces beyond CLI. It handles research, drafting, and first-pass production while editorial control stays with me.',
     tags: [
       'Hermes',
       'Nous Research',
@@ -18,7 +18,7 @@ const blocks = [
     id: 'openclaw',
     label: 'Local Agent Layer',
     title: 'OpenClaw',
-    body: "Tinker time goes into OpenClaw — a local agent operating layer running on WSL/Ubuntu that gives an LLM a persistent environment of files, memory, scheduled jobs, workspaces, and plugins. I've used it to wire pipelines that automate website-building and marketing-app workflows, and it underpins a local Mission Control dashboard for tasks, content planning, and session history.",
+    body: "Tinker time goes into OpenClaw, a local agent operating layer running on WSL/Ubuntu that gives an LLM a persistent environment of files, memory, scheduled jobs, workspaces, and plugins. I've used it to wire pipelines that automate website-building and marketing-app workflows, and it underpins a local Mission Control dashboard for tasks, content planning, and session history.",
     tags: ['OpenClaw', 'WSL/Ubuntu', 'Cron', 'Workspaces', 'Mission Control'],
   },
   {
@@ -32,7 +32,7 @@ const blocks = [
     id: 'skills',
     label: 'Tooling & Skills',
     title: 'Claude Code as a Build Surface',
-    body: "Claude Code CLI is my default development environment, and I'm constantly building reusable Skills for AI automations — including a custom APP_BLUEPRINT.md skill that produces production-grade app specs before any code is written, and a global ~/.claude/CLAUDE.md enforcing four working principles: think before coding, simplicity first, surgical changes, goal-driven execution.",
+    body: "Claude Code CLI is my default development environment, and I'm constantly building reusable Skills for AI automations, including a custom APP_BLUEPRINT.md skill that produces production-grade app specs before any code is written, and a global ~/.claude/CLAUDE.md enforcing four working principles: think before coding, simplicity first, surgical changes, goal-driven execution.",
     tags: ['Claude Code', 'Skills', 'Prompt Engineering', 'APP_BLUEPRINT'],
   },
 ];
@@ -48,7 +48,7 @@ export default function AIWork() {
       <div className={`fade-in${isInView ? ' visible' : ''}`}>
         <p className='section-label'>03 // AI WORK</p>
         <p className='ai-work__intro'>
-          Most of my AI work is operator-focused — wiring agents and models into
+          Most of my AI work is operator-focused. I wire agents and models into
           systems that actually ship: publish content, generate assets, and run
           unattended. The stack below is what I run day-to-day across personal
           projects and tooling.

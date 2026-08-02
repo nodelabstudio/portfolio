@@ -11,7 +11,7 @@ const projects = [
     id: 1,
     title: 'Harbor & Cross',
     description:
-      'A marketing site for Harbor & Cross, a daily devotional iOS app built for Christian fathers. Designed to drive App Store installs and establish a clear brand presence, the site is built on Next.js 15 with the App Router and a static export, written in TypeScript, and styled with Tailwind CSS. Framer Motion handles the animation work, including a custom flip-card devotional preview, responsive phone mockups, and a content-driven newsletter pipeline. Deployed on Vercel under a custom domain at harborandcross.com.',
+      'A marketing site for Harbor & Cross, a daily devotional iOS app built for Christian parents. Designed to drive App Store installs and establish a clear brand presence, the site is built on Next.js 15 with the App Router and a static export, written in TypeScript, and styled with Tailwind CSS. Framer Motion handles the animation work, including a custom flip-card devotional preview, responsive phone mockups, and a content-driven newsletter pipeline. Deployed on Vercel under a custom domain at harborandcross.com.',
     image: harborImage,
     alt: 'Screenshot of Harbor & Cross marketing site',
     live: 'https://harborandcross.com',
@@ -44,7 +44,7 @@ const projects = [
     id: 4,
     title: 'StarShipped — Fleet Logistics',
     description:
-      'Star Wars fleet logistics for the Outer Rim. Originally designed and built in 2018 as a Ruby on Rails app, rebuilt in 2026 on Next.js 16 and React 19 with a holo-terminal design language. Captains commission ships, post cargo runs, and dispatch a fleet across ten planets — runs play out in real time, with ETAs derived from starmap distances, lazy arrival settlement, credit payouts, and a captain leaderboard. An SVG galaxy starmap tracks live route arcs, the View Transitions API drives hyperspace page warps, and shared links unfurl dynamic Open Graph ship cards. Clerk handles authentication, Neon Postgres with Drizzle ORM the data layer, and Vercel Blob the ship imagery, deployed on Vercel.',
+      'A sci-fi fleet logistics sim, originally designed and built in 2018 as a Ruby on Rails app and rebuilt in 2026 on Next.js 16 and React 19 with a holo-terminal design language. Captains commission ships, post cargo runs, and dispatch a fleet across ten planets. Runs play out in real time, with ETAs derived from starmap distances, lazy arrival settlement, credit payouts, and a captain leaderboard. An SVG galaxy starmap tracks live route arcs, the View Transitions API drives hyperspace page warps, and shared links unfurl dynamic Open Graph ship cards. Clerk handles authentication, Neon Postgres with Drizzle ORM the data layer, and Vercel Blob the ship imagery, deployed on Vercel.',
     image: starshippedImage,
     alt: 'Screenshot of StarShipped fleet logistics app',
     live: 'https://star.angelrod.dev',
@@ -66,7 +66,7 @@ const projects = [
     id: 6,
     title: 'Signal & Circuit',
     description:
-      'An AI-powered publication covering the people and systems turning large language models into real, working software. Operated as an experiment in agent-led publishing: research, drafting, and first-pass production are handled by a custom Hermes agent with a dedicated writer profile, while editorial judgment, accuracy review, and final approval remain with me. Coverage spans builder tooling, agent workflows, release shifts, and the operational realities that surface once AI products meet daily production use. The editorial stance is practitioner-first — no empty hype, no rewritten press releases, no manufactured certainty.',
+      'An AI-powered publication covering the people and systems turning large language models into real, working software. Operated as an experiment in agent-led publishing: research, drafting, and first-pass production are handled by a custom Hermes agent with a dedicated writer profile, while editorial judgment, accuracy review, and final approval remain with me. Coverage spans builder tooling, agent workflows, release shifts, and the operational realities that surface once AI products meet daily production use. The editorial stance is practitioner-first: no empty hype, no rewritten press releases, no manufactured certainty.',
     image: signalImage,
     alt: 'Screenshot of Signal & Circuit AI publication',
     live: 'https://signalcircuit.cloud',
