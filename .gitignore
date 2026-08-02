@@ -34,3 +34,4 @@ todos.txt
 .netlify
 
 .vscode*
+.gstack/
