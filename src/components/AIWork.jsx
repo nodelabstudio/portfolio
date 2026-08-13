@@ -17,13 +17,6 @@ const blocks = [
     ],
   },
   {
-    id: 'openclaw',
-    label: 'Local Agent Layer',
-    title: 'OpenClaw',
-    body: "Tinker time goes into OpenClaw, a local agent operating layer running on WSL/Ubuntu that gives an LLM a persistent environment of files, memory, scheduled jobs, workspaces, and plugins. I've used it to wire pipelines that automate website-building and marketing-app workflows, and it underpins a local Mission Control dashboard for tasks, content planning, and session history.",
-    tags: ['OpenClaw', 'WSL/Ubuntu', 'Cron', 'Workspaces', 'Mission Control'],
-  },
-  {
     id: 'pipeline',
     label: 'Autonomous Pipeline',
     title: 'Image Generation & Social Auto-Publishing',
