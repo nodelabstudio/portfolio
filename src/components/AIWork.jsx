@@ -3,14 +3,16 @@ import { useInView } from '../hooks';
 const blocks = [
   {
     id: 'hermes',
-    label: 'Agent Framework',
+    label: 'Agent Operations',
     title: 'Hermes Agent',
-    body: 'I run a self-hosted Hermes, the open-source agent framework from Nous Research, round-the-clock as the engine behind Signal & Circuit. Identity is anchored in SOUL.md, persistent memory in MEMORY.md, with messaging surfaces beyond CLI. It handles research, drafting, and first-pass production while editorial control stays with me.',
+    body: 'I run a self-hosted Hermes Agent system from Nous Research to coordinate research, software work, publishing, analytics, and operational monitoring. Specialized agent profiles handle writing, editing, research, marketing, and development, while reusable skills preserve proven workflows and corrections. Scheduled jobs work through files, terminals, browsers, web sources, and messaging channels such as Telegram and Discord. Human approval gates protect publishing and other consequential actions. Health checks, watchdogs, and fail-closed workflows keep the system observable and accountable.',
     tags: [
-      'Hermes',
-      'Nous Research',
-      'SOUL.md',
+      'Hermes Agent',
+      'Multi-Agent Profiles',
       'Persistent Memory',
+      'Reusable Skills',
+      'Scheduled Automation',
+      'Human Approval',
       'Self-Hosted',
     ],
   },
