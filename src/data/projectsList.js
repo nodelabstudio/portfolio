@@ -1,22 +1,37 @@
-import harborImage from '../assets/images/harbor-screenshot.png';
+import jellyImage from '../assets/images/jelly-preview.jpg';
+import prayerFlipImage from '../assets/images/prayer-flip-preview.jpg';
 import cloudfireImage from '../assets/images/cloudfire-screenshot.png';
 import tideImage from '../assets/images/tide-screenshot.png';
 import starshippedImage from '../assets/images/starshipped-screenshot.png';
 import auroraImage from '../assets/images/aurora-screenshot.png';
 import signalImage from '../assets/images/signal-screenshot.png';
-import portfolioImage from '../assets/images/portfolio-screenshot.png';
+import portfolioImage from '../assets/images/portfolio-appearance-preview.jpg';
 
 const projects = [
   {
-    id: 1,
-    title: 'Harbor & Cross',
+    id: 8,
+    title: 'Jelly',
+    category: 'Interactive playground',
     description:
-      'A marketing site for Harbor & Cross, a daily devotional iOS app built for Christian parents. Designed to drive App Store installs and establish a clear brand presence, the site is built on Next.js 15 with the App Router and a static export, written in TypeScript, and styled with Tailwind CSS. Framer Motion handles the animation work, including a custom flip-card devotional preview, responsive phone mockups, and a content-driven newsletter pipeline. Deployed on Vercel under a custom domain at harborandcross.com.',
-    image: harborImage,
-    alt: 'Screenshot of Harbor & Cross marketing site',
-    live: 'https://harborandcross.com',
+      'A little joy, a lot of jiggle. Poke, stretch, and bounce a translucent 3D jelly, switch between four flavors, and dial in the squishiness. Built with TypeScript and Three.js, a custom soft-body physics simulation brings the jelly to life with responsive deformation, refraction, and studio lighting. WebGPU rendering falls back to WebGL 2, with touch and keyboard controls and support for reduced motion.',
+    image: jellyImage,
+    alt: 'Jelly playground with a glossy raspberry jelly and interactive flavor and physics controls',
+    live: 'https://jelly.angelrod.dev',
+    github: 'https://github.com/nodelabstudio/delicious-jelly',
+    techTags: ['Three.js', 'TypeScript', 'WebGPU', 'Vite', 'Cloudflare'],
+  },
+  {
+    id: 1,
+    title: 'Prayer Flip',
+    category: 'iOS app',
+    description:
+      'A native Swift devotional app for Christian parents on iPhone and iPad. Its 1,095 illustrated cards pair Scripture with reflection, prayer, and a practical family action. The app uses an on-device architecture: favorites, prayer history, reminders, and God Lock choices stay local, with no accounts or developer-operated backend. Widgets, configurable Prayer Times, and voluntary God Lock focus sessions support a daily rhythm, while Apple-managed subscriptions provide Premium access.',
+    image: prayerFlipImage,
+    alt: 'Prayer Flip website showcasing God Lock on two iPhones with Solomon the sparrow',
+    live: 'https://prayerflip.com',
+    appStore: 'https://apps.apple.com/us/app/prayer-flip-family-devotional/id6760314001',
     github: null,
-    techTags: ['Next.js 15', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Vercel'],
+    techTags: ['Swift', 'iOS', 'iPadOS', 'On-device Storage', 'Widgets'],
   },
   {
     id: 2,
@@ -31,7 +46,7 @@ const projects = [
   },
   {
     id: 3,
-    title: 'Tide — Journal App',
+    title: 'Tide: Journal App',
     description:
       'A daily reflection app built around an iOS 26 Liquid Glass UI. Built on Next.js 15, it features AI-generated journaling prompts, weekly pattern synthesis, and per-entry reframing through Groq. The data layer runs on Supabase and Upstash, hosted on Vercel behind Cloudflare DNS.',
     image: tideImage,
@@ -42,7 +57,7 @@ const projects = [
   },
   {
     id: 4,
-    title: 'StarShipped — Fleet Logistics',
+    title: 'StarShipped: Fleet Logistics',
     description:
       'A sci-fi fleet logistics sim, originally designed and built in 2018 as a Ruby on Rails app and rebuilt in 2026 on Next.js 16 and React 19 with a holo-terminal design language. Captains commission ships, post cargo runs, and dispatch a fleet across ten planets. Runs play out in real time, with ETAs derived from starmap distances, lazy arrival settlement, credit payouts, and a captain leaderboard. An SVG galaxy starmap tracks live route arcs, the View Transitions API drives hyperspace page warps, and shared links unfurl dynamic Open Graph ship cards. Clerk handles authentication, Neon Postgres with Drizzle ORM the data layer, and Vercel Blob the ship imagery, deployed on Vercel.',
     image: starshippedImage,
@@ -53,7 +68,7 @@ const projects = [
   },
   {
     id: 5,
-    title: 'Aurora — Mood Dashboard',
+    title: 'Aurora: Mood Dashboard',
     description:
       "An ambient weather dashboard that pulls live conditions for the user's location, selects a cinematic sky photo matched to the current weather and time of day, and asks an LLM to write a fifty-to-seventy-word literary paragraph about the scene. Built on Next.js 15 and React 19, the interface layers glassmorphism panels with GSAP-driven parallax over OpenWeatherMap data. A Groq-to-OpenRouter LLM fallback chain handles model availability, and an Upstash Redis cache with a sliding-window rate limiter manages traffic. Hosted on Vercel, fronted by Cloudflare for SSL, caching, and DNS.",
     image: auroraImage,
@@ -65,8 +80,9 @@ const projects = [
   {
     id: 6,
     title: 'Signal & Circuit',
+    category: 'Publication, currently paused',
     description:
-      'An AI-powered publication covering the people and systems turning large language models into real, working software. Operated as an experiment in agent-led publishing: research, drafting, and first-pass production are handled by a custom Hermes agent with a dedicated writer profile, while editorial judgment, accuracy review, and final approval remain with me. Coverage spans builder tooling, agent workflows, release shifts, and the operational realities that surface once AI products meet daily production use. The editorial stance is practitioner-first: no empty hype, no rewritten press releases, no manufactured certainty.',
+      'An experiment in agent-led publishing, currently paused with the possibility of a future revival. Signal & Circuit covered the people and systems turning large language models into working software. A custom Hermes agent handled research, drafting, and first-pass production, while I retained editorial judgment, accuracy review, and publication approval. Coverage focused on builder tooling, agent workflows, and the practical realities of running AI products.',
     image: signalImage,
     alt: 'Screenshot of Signal & Circuit AI publication',
     live: 'https://signalcircuit.cloud',
@@ -77,7 +93,7 @@ const projects = [
     id: 7,
     title: 'Portfolio',
     description:
-      'My personal developer portfolio, built as a single-page editorial site with a warm-minimalism design language and synced light and dark theming. Built on React 18 and Vite, the site leans on a typography-driven hero, scroll-spy navigation powered by the Intersection Observer API, an interactive filterable project grid, and a tabbed experience timeline. Theming is handled entirely through CSS custom properties, allowing instant theme switches without component re-renders.',
+      'My personal developer portfolio, built with React 18 and Vite. An Apple-inspired interface brings together system typography, spacious project showcases, a translucent navigation bar, and a tabbed experience timeline. Light, dark, and system appearance options use CSS custom properties, remember your preference, and follow device settings in system mode.',
     image: portfolioImage,
     alt: 'Screenshot of personal developer portfolio site',
     live: 'https://angelrod.dev',

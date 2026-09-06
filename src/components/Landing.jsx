@@ -4,9 +4,9 @@ import { FaChevronDown } from 'react-icons/fa';
 export default function Landing() {
   const [ref, isInView] = useInView(0.1);
 
-  const scrollTo = id => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-  };
+  function scrollTo(id) {
+    document.getElementById(id)?.scrollIntoView();
+  }
 
   return (
     <section id='hero' className='hero' ref={ref}>

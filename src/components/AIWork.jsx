@@ -5,35 +5,35 @@ const blocks = [
     id: 'hermes',
     label: 'Agent Framework',
     title: 'Hermes Agent',
-    body: 'I run a self-hosted Hermes, the open-source agent framework from Nous Research, round-the-clock as the engine behind Signal & Circuit. Identity is anchored in SOUL.md, persistent memory in MEMORY.md, with messaging surfaces beyond CLI. It handles research, drafting, and first-pass production while editorial control stays with me.',
+    body: 'I use Hermes to build products, research opportunities, create marketing assets, measure growth, and automate Prayer Flip workflows and distribution. Specialized agents connect tools, preserve context, and verify results from idea through operation. I retain authority over consequential actions, spending, and publication.',
     tags: [
       'Hermes',
-      'Nous Research',
-      'SOUL.md',
-      'Persistent Memory',
-      'Self-Hosted',
+      'Prayer Flip',
+      'Workflow Automation',
+      'Marketing',
+      'Agent Systems',
     ],
   },
   {
     id: 'openclaw',
-    label: 'Local Agent Layer',
+    label: 'Past Exploration',
     title: 'OpenClaw',
-    body: "Tinker time goes into OpenClaw, a local agent operating layer running on WSL/Ubuntu that gives an LLM a persistent environment of files, memory, scheduled jobs, workspaces, and plugins. I've used it to wire pipelines that automate website-building and marketing-app workflows, and it underpins a local Mission Control dashboard for tasks, content planning, and session history.",
+    body: 'I experimented with OpenClaw, a local agent environment I ran on WSL/Ubuntu for files, memory, scheduled jobs, workspaces, and plugins. I used it to build pipelines for website development and marketing workflows, and to support a local Mission Control dashboard for tasks, content planning, and session history.',
     tags: ['OpenClaw', 'WSL/Ubuntu', 'Cron', 'Workspaces', 'Mission Control'],
   },
   {
     id: 'pipeline',
-    label: 'Autonomous Pipeline',
-    title: 'Image Generation & Social Auto-Publishing',
-    body: "A fully-built, self-running pipeline that generates editorial illustrations and auto-posts to X, TikTok, and Instagram. The image side started as a Node.js CLI routing through Puter.js after Gemini's billing wall and Cloudflare SDXL's wrong-style outputs forced a workaround; the publishing side runs on a self-hosted Postiz install. Hermes-produced content from Signal & Circuit feeds in upstream, so the whole loop now runs on its own.",
+    label: 'Publishing Experiment',
+    title: 'Image Generation & Social Publishing',
+    body: 'I built a pipeline that paired Hermes research and drafting with image generation through a Node.js CLI and Puter.js, then publishing through a self-hosted Postiz instance. It supported Signal & Circuit distribution across X, TikTok, and Instagram. The publication is paused for now, with the option to revisit it.',
     tags: ['Puter.js', 'Postiz', 'X', 'TikTok', 'Instagram', 'Self-Hosted'],
   },
   {
     id: 'skills',
     label: 'Tooling & Skills',
-    title: 'Claude Code as a Build Surface',
-    body: "Claude Code CLI is my default development environment, and I'm constantly building reusable Skills for AI automations, including a custom APP_BLUEPRINT.md skill that produces production-grade app specs before any code is written, and a global ~/.claude/CLAUDE.md enforcing four working principles: think before coding, simplicity first, surgical changes, goal-driven execution.",
-    tags: ['Claude Code', 'Skills', 'Prompt Engineering', 'APP_BLUEPRINT'],
+    title: 'Building with Codex CLI',
+    body: 'Codex CLI is my primary development environment for building apps, websites, and internal tools. I use reusable skills and project instructions to carry work from a clear specification through implementation, testing, security review, and release preparation, with focused changes and verification built into the process.',
+    tags: ['Codex CLI', 'Skills', 'Project Instructions', 'Verification'],
   },
 ];
 
@@ -46,12 +46,11 @@ export default function AIWork() {
       className='ai-work section section--ai-work'
       ref={ref}>
       <div className={`fade-in${isInView ? ' visible' : ''}`}>
-        <p className='section-label'>03 // AI WORK</p>
+        <h2 className='section-label'>Working with AI.</h2>
         <p className='ai-work__intro'>
-          Most of my AI work is operator-focused. I wire agents and models into
-          systems that actually ship: publish content, generate assets, and run
-          unattended. The stack below is what I run day-to-day across personal
-          projects and tooling.
+          I use agents to turn ideas into working products and repeatable
+          workflows, with much of that work focused on Prayer Flip. These are
+          the tools I use today and the experiments that shaped my approach.
         </p>
         <div className='ai-work__grid'>
           {blocks.map(block => (

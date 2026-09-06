@@ -15,7 +15,7 @@ export default function About() {
   return (
     <section id='about' className='about section section--about' ref={ref}>
       <div className={`fade-in${isInView ? ' visible' : ''}`}>
-        <p className='section-label'>01 // ABOUT</p>
+        <h2 className='section-label'>About me.</h2>
         <div className='about__grid'>
           <div className='about__photo-wrapper'>
             <img

@@ -14,7 +14,7 @@ export default function Resume() {
       className='experience section section--resume'
       ref={ref}>
       <div className={`fade-in${isInView ? ' visible' : ''}`}>
-        <p className='section-label'>02 // EXPERIENCE</p>
+        <h2 className='section-label'>Experience.</h2>
         <div className='experience__container'>
           <div className='experience__tabs' role='tablist'>
             {experience.map((tab, index) => (

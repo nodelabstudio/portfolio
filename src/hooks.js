@@ -5,8 +5,8 @@ export function useScrollSpy(sectionIds) {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
+      entries => {
+        entries.forEach(entry => {
           if (entry.isIntersecting) {
             setActiveSection(entry.target.id);
           }
@@ -15,7 +15,7 @@ export function useScrollSpy(sectionIds) {
       { rootMargin: '-40% 0px -60% 0px' }
     );
 
-    sectionIds.forEach((id) => {
+    sectionIds.forEach(id => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
     });
