@@ -3,7 +3,7 @@ import { useInView } from '../hooks';
 const blocks = [
   {
     id: 'hermes',
-    label: 'Agent Framework',
+    label: 'Agent Operations',
     title: 'Hermes Agent',
     body: 'I use Hermes to build products, research opportunities, create marketing assets, measure growth, and automate Prayer Flip workflows and distribution. Specialized agents connect tools, preserve context, and verify results from idea through operation. I retain authority over consequential actions, spending, and publication.',
     tags: [
